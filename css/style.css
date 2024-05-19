@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+    color: #30506e;
+}
+
+h1.title {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+h1.title::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 45px;
+    background-color: #8ecbbc;
+    margin-right: 16px;
+}
+
+p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #30506e;
+}
+
+/* Header Navbar */
+header {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    min-height: 80px;
+    position: fixed;
+    z-index: 99;
+}
+
+header .navbar-container {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 80px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar-container .logo img {
+    width: 100px;
+}
+
+header .navbar-container .nav-list ul {
+    display: flex;
+    column-gap: 2rem;
+}
+
+header .navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header .navbar-container .nav-list li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+
+    position: relative;
+    transition: color 0.3s;
+}
+
+header .navbar-container .nav-list li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+header .navbar-container .nav-list li a:hover::after {
+    width: 100%;
+}
+
+header .navbar-container .burger-menu {
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+/* Main Cover */
+main .cover {
+    position: relative;
+    height: 640px;
+    overflow: hidden;
+}
+
+main .cover .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 640px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/assets/image/cover.jpg');
+    background-size: cover;
+    background-position: center bottom 95%;
+    transform: translateZ(0);
+    z-index: -1;
+}
+
+main .about-content,
+main .destinations-content,
+main .map-content,
+footer .footer-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+main .cover .cover-content {
+    height: 640px;
+    padding-block: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .cover .cover-content h1 {
+    font-size: 60px;
+    color: white;
+    margin: 0;
+}
+
+main .cover .cover-content p {
+    color: white;
+    max-width: 600px;
+    text-align: center;
+}
+
+main .cover .cover-content a {
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    background-color: #8ecbbc;
+    text-decoration: none;
+    margin-top: 10%;
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+main .cover .cover-content a:hover {
+    background-color: #30506e;
+}
+
+/* Bagian Tentang Yogyakarta */
+main .about-content {
+    display: flex;
+    margin-block: 150px;
+    column-gap: 2rem;
+}
+
+main .about-content .image,
+main .about-content article {
+    flex: 1;
+}
+
+main .about-content .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+main .about-content p {
+    font-size: 14px;
+    text-align: justify;
+    text-indent: 2.5rem;
+}
+
+
+/* Bagian Gallery Destinasi */
+main .destinations-content {
+    margin-block: 150px;
+}
+
+main .destinations-content .gallery-container {
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.gallery-container .inner-container {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery-content {
+    flex: 1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+    cursor: pointer;
+}
+
+.gallery-container.second {
+    margin-top: 1rem;
+}
+
+.gallery-content.one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/assets/image/malioboro.jpg);
+}
+
+.gallery-content.two {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/assets/image/candi-borobudur.jpg);
+}
+
+.gallery-content.three {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/assets/image/pantai-seruni.jpg);
+}
+
+.gallery-content.four {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/assets/image/taman-sari.jpg);
+}
+
+.gallery-content.five {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/assets/image/pantai-midodaren.jpg);
+}
+
+.gallery-content.six {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/assets/image/kali-kuning.jpg);
+}
+
+.gallery-content.seven {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/assets/image/mangunan.jpg);
+}
+
+.gallery-content.eight {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25)), url(/assets/image/candi-prambanan.jpg);
+}
+
+/* Bagian Peta & Aside */
+main .map-content {
+    margin-block-start: 150px;
+    margin-block-end: 50px;
+}
+
+main .map-content .content {
+    display: flex;
+    gap: 1rem;
+}
+
+main .map-content .content .map-image {
+    flex: 3;
+}
+
+main .map-content .content aside {
+    flex: 1;
+
+    padding: 1rem;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+main .map-content .content .map-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .map-content .content .map-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+main .map-content .content aside article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #30506e;
+}
+
+main .map-content .content aside article h4.aside-title,
+main .map-content .content aside article h5 {
+    font-weight: 600;
+}
+
+main .map-content .content aside article h4.aside-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .map-content .content aside article h4.aside-title::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #8ecbbc;
+    margin-top: 8px;
+}
+
+main .map-content .content aside article img {
+    max-width: 160px;
+    border-radius: 100%;
+}
+
+main .map-content .content aside article {
+    margin-bottom: 2rem;
+}
+
+main .map-content .content aside article p {
+    margin-block: 0.2rem;
+}
+
+main .map-content .content aside article span {
+    margin-left: 0.5rem;
+}
+
+main .map-content .content aside hr {
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+main .map-content .content aside article li a {
+    font-size: 12px;
+    color: inherit;
+}
+
+/* Footer */
+footer {
+    background-color: #8ecbbc;
+    height: 80px;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 80px;
+}
+
+footer .footer-content img {
+    max-width: 100px;
+}
+
+footer .footer-content p {
+    color: white;
+}
+
+footer .footer-content .social-media {
+    display: flex;
+    column-gap: 1rem;
+}
+
+/* Responsive */
+
+/* Lebar layar > 1440px */
+@media screen and (min-width: 1441px) {
+    main .cover .parallax-bg {
+        background-position: center;
+    }
+}
+
+/* Tampilan tablet */
+@media screen and (max-width: 768px) {
+
+    main .about-content,
+    main .destinations-content,
+    main .map-content,
+    footer .footer-content {
+        max-width: 600px;
+        width: 100%;
+        margin-block: 100px;
+    }
+
+    header .navbar-container {
+        flex-direction: column;
+        margin-block: 0.5rem;
+    }
+
+    header .navbar-container .nav-list li a {
+        font-size: 14px;
+    }
+
+    main .cover {
+        height: 540px;
+    }
+
+    main .cover .parallax-bg {
+        height: 540px;
+    }
+
+    main .cover .cover-content {
+        height: 540px;
+    }
+
+    main .cover .cover-content h1 {
+        font-size: 36px;
+    }
+
+    main .about-content {
+        flex-direction: column;
+    }
+
+    main .about-content .image img {
+        margin-block-end: 1.5rem;
+    }
+
+    main .destinations-content .gallery-container {
+        flex-direction: column;
+    }
+
+    main .map-content .content {
+        flex-direction: column;
+    }
+
+    main .map-content .content aside {
+        align-self: center;
+    }
+}
+
+/* Tampilan mobile */
+@media screen and (max-width: 375px) {
+    h1.title {
+        font-size: 18px;
+    }
+
+    main .about-content,
+    main .destinations-content,
+    main .map-content,
+    footer .footer-content {
+        max-width: 300px;
+        width: 100%;
+        margin-block: 50px;
+    }
+
+    header .navbar-container {
+        flex-direction: row;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    header .navbar-container .nav-list ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    header .navbar-container .nav-list li {
+        margin-block: 0.2rem;
+    }
+
+    header .navbar-container .nav-list.show ul {
+        display: flex;
+    }
+
+    header .navbar-container .burger-menu {
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(256, 256, 256, 0.25);
+        border-radius: 3px;
+    }
+
+    main .cover .cover-content {
+        max-width: 300px;
+        width: 100%;
+        margin: auto;
+    }
+
+    main .cover .cover-content h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    main .cover .cover-content p {
+        font-weight: 400;
+    }
+
+    .gallery-container .inner-container {
+        flex-direction: column;
+        min-height: 400px;
+    }
+
+    main .about-content p {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
