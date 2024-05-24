@@ -382,6 +382,15 @@ footer .footer-content .social-media {
     }
 }
 
+@media screen and (min-width: 769px) {
+    main .about-content,
+    main .destinations-content,
+    main .map-content,
+    footer .footer-content {
+        width: 90%;
+    }
+}
+
 /* Tampilan tablet */
 @media screen and (max-width: 768px) {
 
@@ -389,7 +398,7 @@ footer .footer-content .social-media {
     main .destinations-content,
     main .map-content,
     footer .footer-content {
-        max-width: 600px;
+        max-width: 90%;
         width: 100%;
         margin-block: 100px;
     }
