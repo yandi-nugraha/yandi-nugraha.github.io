@@ -450,7 +450,7 @@ footer .footer-content .social-media {
 }
 
 /* Tampilan mobile */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 465px) {
     h1.title {
         font-size: 18px;
     }
@@ -459,8 +459,6 @@ footer .footer-content .social-media {
     main .destinations-content,
     main .map-content,
     footer .footer-content {
-        max-width: 300px;
-        width: 100%;
         margin-block: 50px;
     }
 
